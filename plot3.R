@@ -16,7 +16,12 @@ DesiredDateTime$DateTime <- strptime(DesiredDateTime$DateTime,
 
 desired_data$DateTime <- DesiredDateTime$DateTime
 
-png(filename = "plot2.png", width = 480, height = 480, units = 'px')
-with(desired_data, plot(DateTime, Global_active_power, type = 'l', ylab = 'Global Active Power (kilowatts)', xlab = ''))
+png(filename = "plot3.png", width = 480, height = 480, units = 'px')
+with(desired_data, plot(DateTime, Sub_metering_1, type = 'n', ylab = 'Energy sub metering', xlab = ''))
 
+points(desired_data$DateTime, desired_data$Sub_metering_1, type = 'l')
+points(desired_data$DateTime, desired_data$Sub_metering_2, type = 'l', col = 'red')
+points(desired_data$DateTime, desired_data$Sub_metering_3, type = 'l', col = 'purple')
+
+legend('topright', lty = c(1, 1, 1), legend = c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'), col = c('black', 'red', 'purple'))
 dev.off()
