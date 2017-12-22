@@ -17,6 +17,7 @@ DesiredDateTime$DateTime <- strptime(DesiredDateTime$DateTime,
 desired_data$DateTime <- DesiredDateTime$DateTime
 
 png(filename = "plot3.png", width = 480, height = 480, units = 'px')
+
 with(desired_data, plot(DateTime, Sub_metering_1, type = 'n', ylab = 'Energy sub metering', xlab = ''))
 
 points(desired_data$DateTime, desired_data$Sub_metering_1, type = 'l')
