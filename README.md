@@ -1,3 +1,6 @@
+# The scripts provided will output the desired results if placed in the same directory as the dataset.
+# The dataset can be downloaded using the link given below. Please unzip the contents before running the script.
+
 ## Introduction
 
 This assignment uses data from
